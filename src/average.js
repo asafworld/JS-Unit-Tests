@@ -15,15 +15,18 @@
 const average = (array) => {
   let total = 0;
   const totalOfNumbers = array.length;
+  if (array.length === 0) {
+    return undefined;
+  }
   for (let i = 0; i < array.length; i += 1) {
-    if (Number.isNaN(array[i])) {
-      return 'undefined';
+    if (typeof array[i] !== 'number') {
+      return undefined;
     } 
     total += array[i];
   }
   const media = total / totalOfNumbers;
-  return media;
+  return (Math.round(media));
 };
 
-console.log(average([2, 4, 5, 7]));
+console.log(average(['1', 2, 4, 5]));
 module.exports = average;
