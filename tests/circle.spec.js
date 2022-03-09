@@ -1,6 +1,7 @@
 /* eslint-disable max-len */
 /* eslint-disable no-unused-vars */
 
+const { TestScheduler } = require('jest');
 const circle = require('../src/circle');
 
 /*
@@ -25,14 +26,21 @@ const circle = require('../src/circle');
 
 describe('4 - Implemente os casos de teste para a função `circle`', () => {
   it('Verifica se ao receber um raio, a função `circle` retorna um objeto contedos os valores esperados', () => {
-    fail('Teste vazio!');
     // ESCREVA SEUS TESTES ABAIXO:
     // Teste se circle retorna undefined, caso o parâmetro passado não seja um número.
+    expect(circle(NaN)).toBeUndefined();
     // Teste se circle retorna um objeto.
+    expect(typeof circle(2)).toBe('object')
     // Teste se o objeto retornado tem 3 propriedades.
+    expect(Object.entries(circle(3)).length).toBe(3)
     // Teste se a função, quando não recebe nenhum parâmetro, retorna undefined.
+    expect(circle()).toBeUndefined();
     // Teste se dentro do objeto retornado, a função retorna uma key com value igual a circunferência correta para um círculo de raio 2.
+    expect(circle(2)).toHaveProperty('circumference', 12.56)
     // Teste se dentro do objeto retornado, a função retorna uma key com value igual a área correta para um círculo de raio 3.
+    expect(circle(3)).toHaveProperty('area',28.259999999999998);
     // Teste que a função retorna, num objeto, os dados corretos de um círculo de raio 3.
+    const radiusObject = { radius: 3, area: 28.259999999999998, circumference: 18.84 };
+    expect(circle(3)).toEqual(radiusObject);
   });
 });
