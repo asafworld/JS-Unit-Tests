@@ -1,18 +1,17 @@
 {
-  "name": "sd-0x-block8-project-js-unit-tests",
+  "name": "js-unit-tests",
   "version": "1.0.0",
-  "description": "Project for block 8",
+  "description": "Project for the JS unit tests practices",
   "main": "index.js",
   "scripts": {
-    "test": "jest",
-    "lint": "eslint --no-inline-config --no-error-on-unmatched-pattern -c .eslintrc.json . --ext .js,.jsx"
+    "test": "jest"
   },
   "jest": {
     "rootDir": "./tests/"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/betrybe/ssd-0x-block8-project-js-unit-test.git"
+    "url": "git+https://github.com/asafworld/JS-Unit-Tests.git"
   },
   "keywords": [
     "javascript",
@@ -20,12 +19,12 @@
     "assert",
     "jest"
   ],
-  "author": "Jean Vasconcelos",
+  "author": "asafworld",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/betrybe/sd-0x-block8-project-js-unit-test/issues"
+    "url": "https://github.com/asafworld/JS-Unit-Tests.git/issues"
   },
-  "homepage": "https://github.com/betrybe/sd-0x-block8-project-js-unit-test#readme",
+  "homepage": "https://github.com/asafworld/JS-Unit-Tests.git",
   "devDependencies": {
     "eslint-config-trybe-fundamentals": "1.1.1",
     "jest": "24.9.0"
